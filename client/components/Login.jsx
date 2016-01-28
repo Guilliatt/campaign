@@ -4,4 +4,4 @@ Login = React.createClass({
       <h1>This is where the login goes</h1>
     )
   }
-})g
+})
