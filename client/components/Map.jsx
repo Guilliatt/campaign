@@ -4,8 +4,8 @@ Meteor.startup(function() {
 
 Tracker.autorun(function () {
   if (Mapbox.loaded()) {
-    L.mapbox.accessToken = Meteor.settings.public.mapbox.accessToken;
-    map = L.mapbox.map("map", Meteor.settings.public.mapbox.mapId);
+    L.mapbox.accessToken = Meteor.settings.public.accessToken;
+    map = L.mapbox.map("map", Meteor.settings.public.mapId);
   }
 });
 
