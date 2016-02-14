@@ -3,9 +3,9 @@ const {
   Route,
   Redirect
 } = ReactRouter;
-const history = ReactRouter
-                 .history
-                 .useQueries(ReactRouter.history.createHistory)()
+const {
+  history
+} = ReactRouter.lib.BrowserHistory;
 Meteor.startup(function() {
   let AppRoutes = (
     <Router history={history}>
@@ -17,3 +17,6 @@ Meteor.startup(function() {
   )
   React.render(AppRoutes, document.body)
 })
+
+// window.location.search.substring(1).split("=")
+// window.location.search.substring(1).split("=")[1]
